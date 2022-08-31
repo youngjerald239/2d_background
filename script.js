@@ -19,6 +19,11 @@ const slider = document.getElementById('slider')
 slider.value = gameSpeed
 const showGameSpeed = document.getElementById('showGameSpeed')
 showGameSpeed.innerHTML = gameSpeed
+slider.addEventListener('change', function(e){
+    console.log(e)
+    gameSpeed = e.target.value
+    showGameSpeed.innerHTML = gameSpeed
+})
 
 class Layer {
     constructor(image, speedModifier) {
